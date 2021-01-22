@@ -7,11 +7,113 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
 
 
+
     
     <title>Weather Dashboard</title>
 </head>
 <body>
+    <div class="container">
+        <div class="row bg-dark text-light">
+            <div class="mx-auto">
+          <h1>Weather Dashboard</h1> 
+            </div>    
+        </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- input column -->
+          <div class="col-3 mt-2">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="search-term" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary bg-primary" id="search-btn"type="button" style="width: 1rem">B</button>
+                </div>
+              </div>
+
+
+              <!-- search City local storage -->
+
+              <div class="card" >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="city-1"></li>
+                  <li class="list-group-item" id="city-2"></li>
+                  <li class="list-group-item" id="city-3"></li>
+                  <li class="list-group-item" id="city-4"></li>
+                  <li class="list-group-item" id="city-5"></li>
+                  <li class="list-group-item" id="city-6"></li>
+                  <li class="list-group-item" id="city-7"></li>
+                  <li class="list-group-item" id="city-8"></li>
+                </ul>
+              </div>
+          </div>
+
+           <!--weather input column-->
+          <div class="col-9 mt-2">
+            <div class="card text-black bg-transparent mb-3" style="max-width: 55rem;">
+                <div class="card-body" id='response-city-name'>     
+                </div>
+
+                <div class="card-body" id='response-weather'> 
+                                     
+                </div>
+            </div>
+
+            <!-- 5-day forecast row -->
+            <div class="row">
+                <div class="col-12">             
+                    <h5>5 Day Forecast:</h5>
+                </div>   
+                
+                <div class="col-12">
+                    <div class="card-deck ">
+                                 
+                        <div class="card bg-primary">
+                          
+                          <div class="card-body card-col-1">
+                            <h5 class="card-title ">Card title</h5>
+                            <p class="card-text">This is a longer card with .</p>
+                            
+                          </div>
+                        </div>
+                        <div class="card bg-primary">                          
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below .</p>
+                            
+                          </div>
+                        </div>
+                        <div class="card bg-primary">                          
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a nt.</p>
+                            
+                          </div>
+                        </div>
+                        <div class="card bg-primary">                          
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a al content.</p>
+                            
+                          </div>
+                        </div>
+                        <div class="card bg-primary">
+                          
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a equal height action.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+          </div>         
+      </div>
+
+      
     
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/index.js"></script>
 </html>
