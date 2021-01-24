@@ -15,7 +15,7 @@ https://github.com/a7063p/week-6-challenge.git
   - Red represents an index of 5 and above - high risk
  
  * Users are presented with a 5 day forecast
- * Users previous searches are saved, when the user selcts a previous search, this cities weather is displayed. This search prevents duplicate searches
+ * Users previous searches are saved, when the user selects a previous search, this cities weather is displayed. This search prevents duplicate searches
   //// current bug/issue - this option will only work ***after*** the user reloads the page - sorry I am working on it
   
   ![weather_dashboard](/assets/images/weather_dashboard.PNG)
