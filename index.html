@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 
 
@@ -13,7 +14,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row bg-dark text-light">
+        <div class="row bg-dark text-light hd-style">
             <div class="mx-auto">
           <h1>Weather Dashboard</h1> 
             </div>    
@@ -24,83 +25,92 @@
             <!-- input column -->
           <div class="col-3 mt-2">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" id="search-term" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" id="search" aria-label="Recipient's username" aria-describedby="basic-addon2" value="Las Vegas"/>
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary bg-primary" id="search-btn"type="button" style="width: 1rem">B</button>
+                  <button class="btn btn-outline-secondary bg-primary" id="search-btn"type="button" ><span class="iconify icon" data-icon="bi:search" data-inline="false"></span></button>
                 </div>
               </div>
 
 
               <!-- search City local storage -->
 
-              <div class="card" >
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item" id="city-1"></li>
-                  <li class="list-group-item" id="city-2"></li>
-                  <li class="list-group-item" id="city-3"></li>
-                  <li class="list-group-item" id="city-4"></li>
-                  <li class="list-group-item" id="city-5"></li>
-                  <li class="list-group-item" id="city-6"></li>
-                  <li class="list-group-item" id="city-7"></li>
-                  <li class="list-group-item" id="city-8"></li>
+              <div>
+                  <div>
+                      <p class="para-style"> Recent Search:</p>
+                  </div>
+                <ul  class="ul-style" id="city-storage" >
+                  
                 </ul>
               </div>
           </div>
 
            <!--weather input column-->
           <div class="col-9 mt-2">
-            <div class="card text-black bg-transparent mb-3" style="max-width: 55rem;">
-                <div class="card-body" id='response-city-name'>     
-                </div>
-
-                <div class="card-body" id='response-weather'> 
-                                     
+            <div class="card text-black mb-3 input-crd" style="max-width: 55rem;">
+                <div class="card-body"> 
+                    <h5 class='city-name' id="response-city-name"></h5>
+                    <div id="current-weather">
+                        <p class="current-city" id='current-temp'></p>
+                        <p class="current-city" id='current-humidity'></p>
+                        <p class="current-city" id='current-wind'></p>
+                        <p class="current-city" id='current-uvi'><span id="uv-index"></span></p>
+                    </div>                    
                 </div>
             </div>
 
             <!-- 5-day forecast row -->
             <div class="row">
                 <div class="col-12">             
-                    <h5>5 Day Forecast:</h5>
+                    <h5>5-Day Forecast:</h5>
                 </div>   
                 
-                <div class="col-12">
-                    <div class="card-deck ">
+                <div class="col-12" >
+                    <div class="card-deck" id="forecast">
                                  
                         <div class="card bg-primary">
                           
                           <div class="card-body card-col-1">
-                            <h5 class="card-title ">Card title</h5>
-                            <p class="card-text">This is a longer card with .</p>
+                            <h5 class="card-title" id="forecast-1"></h5>
+                            <img id="day-1-img" />                            
+                            <p class="card-text" id="day-1-temp"></p>
+                            <p class="card-text" id="day-1-humid"></p>
                             
                           </div>
                         </div>
                         <div class="card bg-primary">                          
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below .</p>
+                            <h5 class="card-title"id="forecast-2"></h5>
+                            <img id="day-2-img" />                            
+                            <p class="card-text" id="day-2-temp"></p>
+                            <p class="card-text" id="day-2-humid"></p>
                             
                           </div>
                         </div>
                         <div class="card bg-primary">                          
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a nt.</p>
+                            <h5 class="card-title" id="forecast-3"></h5>
+                            <img id="day-3-img" />                            
+                            <p class="card-text" id="day-3-temp"></p>
+                            <p class="card-text" id="day-3-humid"></p>
                             
                           </div>
                         </div>
                         <div class="card bg-primary">                          
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a al content.</p>
+                            <h5 class="card-title" id="forecast-4"></h5>
+                            <img id="day-4-img" />                            
+                            <p class="card-text" id="day-4-temp"></p>
+                            <p class="card-text" id="day-4-humid"></p>
                             
                           </div>
                         </div>
                         <div class="card bg-primary">
                           
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a equal height action.</p>
+                            <h5 class="card-title" id="forecast-5"></h5>
+                            <img id="day-5-img" />                            
+                            <p class="card-text" id="day-5-temp"></p>
+                            <p class="card-text" id="day-5-humid"></p>
                             
                           </div>
                         </div>
@@ -113,6 +123,7 @@
       
     
 </body>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/index.js"></script>

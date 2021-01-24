@@ -2,6 +2,10 @@
     box-sizing: border-box;
     }
 
+    .hd-style {
+        border-radius: 3px ;
+    }
+
 
 
     /*---UV INDEX---*/
@@ -9,20 +13,64 @@
 .uv-low {
     background-color: forestgreen;
     color: white;
-    width: 100px;
+    padding: 3px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .uv-medium {
     background-color: gold;
     color: black;
-    width: 100px;
+    padding: 3px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .uv-high {
     background-color: crimson;
     color: black;
-    width: 100px;
+    padding: 3px;
     text-align: center;
+    border-radius: 5px;
+}
+
+.input-crd{
+    background-color: #a4b0b0;
+    border-radius: 5px;
+}
+
+.ul-style{
+    list-style-type: none;
+    padding: 0; 
+    
+    
+}
+
+.list-style{
+    border: 1px solid #bfc8c8;
+    background-color: #edefef;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.search-list {
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px;
+    
+}
+
+.search-list:hover {
+    color: black;
+}
+
+.para-style {
+    padding-bottom: 0;
+    margin-bottom: 1px;
+    
+}
+
+.icon {
+  color: white;  
 }
