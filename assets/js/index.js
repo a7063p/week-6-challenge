@@ -64,7 +64,8 @@ var searchWeather = function() {
             iconImg.setAttribute('src', "http://openweathermap.org/img/wn/" + icon + "@2x.png");
             iconImg.setAttribute('alt', iconText);
 
-            cityHeaderEl.appendChild(iconImg);       
+            cityHeaderEl.appendChild(iconImg);
+                
 
             uvIndex(uvi);
             forecastDay1(data);
@@ -325,17 +326,19 @@ var recentSearch = function (value) {
        
     var newCity = value.innerHTML    
          
-    document.getElementById('search').removeAttribute('value', 'Las Vegas')      
-    document.getElementById('search').setAttribute('value', newCity) 
+    document.getElementById('search').value = newCity     
+   
     searchWeather()   
     
         
 };
 
 var btnHandler = function (event){
-    event.target.matches('#search-btn') 
+    event.target.matches('#search-btn')
+       
 
-    searchWeather()    
+    searchWeather() 
+    
 };
 
 
